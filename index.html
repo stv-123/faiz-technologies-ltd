@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faiz Technologies Ltd</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container">
+      <h1>FAIZ TECHNOLOGIES LTD</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#vision">Vision & Mission</a>
+        <a href="services.html">Services</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <h2>FIRE AND SAFETY SERVICES</h2>
+      <p>Faiz Technologies Ltd delivers cutting-edge solutions in technology and innovation.</p>
+      <a href="services.html" class="btn">Explore Our Services</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container">
+    <h2>About Us</h2>
+    <p>FAIZ TECHNOLOGIES was registered on 19th July 2022 Business under the REGISTRATION OF BUSINESS NAMES ACT (cap, 449 section 14) and later incorporated as a limited company on 24th February 2025 and a leading national safety solution provider. From risk assessment to delivery of work, in partnership with government, business and other organizations we provide integrated solutions that meet the safety challenges of the 21st century.</p>
+    <p>Founded in 2022, we have quickly risen to become an industry team player by insisting on the highest training and safety standards. Those standards coupled with our integrity, originality and personality means you get a personal and tailored safety service and, most importantly, the best service for you.</p>
+    <p>We are proud of our distinct cultures and strong ethical values that guide how we conduct our business and develop positive relationships with our customers, investors and communities we work with.</p>
+  </section>
+
+  <!-- Vision, Mission & Core Values -->
+  <section id="vision">
+    <div class="container">
+      <h2>Our Vision, Mission & Core Values</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Vision</h3>
+          <p>To be a premier Safety Services Solutions provider in the region by providing integrated safety solutions to our esteemed clients.</p>
+        </div>
+        <div class="card">
+          <h3>Mission</h3>
+          <p>To create total customer satisfaction through provision of integrated safety solutions.</p>
+        </div>
+        <div class="card">
+          <h3>Core Values</h3>
+          <ul>
+            <li>Service delivery & satisfaction</li>
+            <li>Customer Focus</li>
+            <li>Expertise</li>
+            <li>Integrity</li>
+            <li>Innovation</li>
+            <li>Originality</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Management Profile -->
+  <section id="management" class="container">
+    <h2>Management Profile</h2>
+    <div class="profile-card">
+      <img src="https://via.placeholder.com/150" alt="Director Photo">
+      <h3>Faith Kaimenyi Mutwiri</h3>
+      <p>Director, Faiz Technologies Ltd</p>
+      <p>She is a holder of Bachelor of Science Mechanical Engineering.</p>
+      <p>She has undertaken a number of short courses related to fire Management trainings</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Our Gallery</h2>
+    <div class="gallery-container">
+      <!-- Image items -->
+      <img src="faiz 4.jpg" alt="Faiz Technologies Image 1" onclick="openLightbox(this)">
+      <img src="faiz 2.jpg" alt="Faiz Technologies Image 2" onclick="openLightbox(this)">
+      <img src="faiz 3.jpg" alt="Faiz Technologies Image 3" onclick="openLightbox(this)">
+      <img src="faiz 5.jpg" alt="Faiz Technologies Image 4" onclick="openLightbox(this)">
+      <img src="faiz 6.jpg" alt="Faiz Technologies Image 5" onclick="openLightbox(this)">
+      <img src="faiz 1.jpg" alt="Faiz Technologies Image 6" onclick="openLightbox(this)">
+      
+      <!-- Video (stays normal) -->
+      <video controls>
+        <source src="faiz v1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div id="caption"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Faiz Technologies Ltd | All Rights Reserved</p>
+    <p>Email: faiztechnology78@gmail.com | Phone: +254 703 868 499</p>
+  </footer>
+
+  <!-- Lightbox Script -->
+  <script>
+    function openLightbox(img) {
+      document.getElementById("lightbox").style.display = "block";
+      document.getElementById("lightbox-img").src = img.src;
+      document.getElementById("caption").innerHTML = img.alt;
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+</body>
+</html>
