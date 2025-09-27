@@ -26,7 +26,7 @@ h1, h2, h3 {
 
 p {
   font-size: 1rem;
-  color: #444;
+  color: #01070cf7;
 }
 
 /* ---------------- HEADER ---------------- */
@@ -268,8 +268,8 @@ nav a.active {
 
 /* ---------------- FOOTER ---------------- */
 footer {
-  background: #5eafea;
-  color: #fff;
+  background: #1a7ec6;
+  color: hsl(0, 11%, 5%);
   text-align: center;
   padding: 20px;
   margin-top: 50px;
