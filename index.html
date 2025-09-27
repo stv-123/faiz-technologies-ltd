@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Faiz Technologies Ltd</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE">
 </head>
 <body>
   <!-- Header / Navigation -->
@@ -13,7 +16,7 @@
       <h1>FAIZ TECHNOLOGIES LTD</h1>
       <nav>
         <a href="index.html">Home</a>
-        <a href="#about">About</a>
+        <a href="gallery.html">Gallery</a>
         <a href="#vision">Vision & Mission</a>
         <a href="services.html">Services</a>
       </nav>
@@ -77,50 +80,8 @@
     </div>
   </section>
 
-  <!-- Gallery Section -->
-  <section id="gallery">
-    <h2>Our Gallery</h2>
-    <div class="gallery-container">
-      <!-- Image items -->
-      <img src="faiz 4.jpg" alt="Faiz Technologies Image 1" onclick="openLightbox(this)">
-      <img src="faiz 2.jpg" alt="Faiz Technologies Image 2" onclick="openLightbox(this)">
-      <img src="faiz 3.jpg" alt="Faiz Technologies Image 3" onclick="openLightbox(this)">
-      <img src="faiz 5.jpg" alt="Faiz Technologies Image 4" onclick="openLightbox(this)">
-      <img src="faiz 6.jpg" alt="Faiz Technologies Image 5" onclick="openLightbox(this)">
-      <img src="faiz 1.jpg" alt="Faiz Technologies Image 6" onclick="openLightbox(this)">
-      
-      <!-- Video (stays normal) -->
-      <video controls>
-        <source src="faiz v1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </section>
 
-  <!-- Lightbox Modal -->
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <span class="close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img">
-    <div id="caption"></div>
-  </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Faiz Technologies Ltd | All Rights Reserved</p>
-    <p>Email: faiztechnology78@gmail.com | Phone: +254 703 868 499</p>
-  </footer>
-
-  <!-- Lightbox Script -->
-  <script>
-    function openLightbox(img) {
-      document.getElementById("lightbox").style.display = "block";
-      document.getElementById("lightbox-img").src = img.src;
-      document.getElementById("caption").innerHTML = img.alt;
-    }
-
-    function closeLightbox() {
-      document.getElementById("lightbox").style.display = "none";
-    }
   </script>
 </body>
 </html>
