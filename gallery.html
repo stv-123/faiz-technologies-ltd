@@ -27,21 +27,25 @@
 
   <!-- Gallery Section -->
   <section id="gallery">
-    <h2>Our Gallery</h2>
-    <div class="gallery-container">
-      <!-- Images -->
-      <img src="faiz 4.jpg" alt="Faiz Technologies Image 1" onclick="openLightbox(this)">
-      <img src="faiz 2.jpg" alt="Faiz Technologies Image 2" onclick="openLightbox(this)">
-      <img src="faiz 3.jpg" alt="Faiz Technologies Image 3" onclick="openLightbox(this)">
-      <img src="faiz 5.jpg" alt="Faiz Technologies Image 4" onclick="openLightbox(this)">
-      <img src="faiz 6.jpg" alt="Faiz Technologies Image 5" onclick="openLightbox(this)">
-      <img src="faiz 1.jpg" alt="Faiz Technologies Image 6" onclick="openLightbox(this)">
+    <div class="container">
+      <h2>Our Gallery</h2>
+      <p class="intro">A glimpse of our fire and safety services, projects, and dedicated team in action.</p>
       
-      <!-- Video -->
-      <video controls>
-        <source src="faiz v1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <div class="gallery-container">
+        <!-- Images -->
+        <img src="faiz 4.jpg" alt="Faiz Technologies Project 1" onclick="openLightbox(this)">
+        <img src="faiz 2.jpg" alt="Faiz Technologies Project 2" onclick="openLightbox(this)">
+        <img src="faiz 3.jpg" alt="Faiz Technologies Project 3" onclick="openLightbox(this)">
+        <img src="faiz 5.jpg" alt="Faiz Technologies Project 4" onclick="openLightbox(this)">
+        <img src="faiz 6.jpg" alt="Faiz Technologies Project 5" onclick="openLightbox(this)">
+        <img src="faiz 1.jpg" alt="Faiz Technologies Project 6" onclick="openLightbox(this)">
+        
+        <!-- Video -->
+        <video controls>
+          <source src="faiz v1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </section>
 
@@ -52,16 +56,20 @@
     <div id="caption"></div>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Faiz Technologies Ltd | All Rights Reserved</p>
-    <p>Email: faiztechnology78@gmail.com | Phone: +254 703 868 499</p>
-  </footer>
+ <!-- Footer -->
+<footer>
+  <p>&copy; 2025 Faiz Technologies Ltd | All Rights Reserved</p>
+  <p>
+    Email: <a href="mailto:faiztechnologies78@gmail.com">faiztechnologies78@gmail.com</a> |
+    Phone: <a href="tel:+254703868499">+254 703 868 499</a>
+  </p>
+</footer>
+
 
   <!-- Lightbox Script -->
   <script>
     function openLightbox(img) {
-      document.getElementById("lightbox").style.display = "block";
+      document.getElementById("lightbox").style.display = "flex";
       document.getElementById("lightbox-img").src = img.src;
       document.getElementById("caption").innerHTML = img.alt;
     }
