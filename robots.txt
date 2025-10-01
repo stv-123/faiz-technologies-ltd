@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stv-123.github.io/faiz-technologies-ltd/sitemap.xml
