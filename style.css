@@ -26,8 +26,7 @@ h1, h2, h3 {
 
 p {
   font-size: 1rem;
- color: black;
-
+  color: black;
 }
 
 /* ---------------- HEADER ---------------- */
@@ -267,6 +266,59 @@ nav a.active {
   text-align: center;
 }
 
+/* ---------------- ACCORDION ---------------- */
+.accordion {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.accordion-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  background: #145a8d;
+  color: #fff;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+}
+
+.accordion-content {
+  padding: 15px;
+}
+
+/* ---------------- MANAGEMENT PROFILE ---------------- */
+.profile-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.profile-img {
+  width: 120px;
+  height: 160px; /* Passport-like ratio */
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid #ccc;
+}
+
+.profile-info {
+  flex: 1;
+}
+
 /* ---------------- FOOTER ---------------- */
 footer {
   background: #1a7ec6;
@@ -295,32 +347,49 @@ footer p {
   #hero h2 {
     font-size: 2rem;
   }
+
+  /* Management profile stacks on mobile */
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .profile-info {
+    text-align: center;
+  }
+}
+.back-home {
+  margin-top: 30px;
+  text-align: center;
 }
 
-.accordion {
-  max-width: 800px;
-  margin: 30px auto;
-}
-
-.accordion-item {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  background: #fff;
-  overflow: hidden;
-}
-
-.accordion-header {
-  width: 100%;
-  text-align: left;
+.back-home .btn {
   background: #145a8d;
   color: #fff;
-  padding: 15px;
-  font-size: 1.1rem;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
   font-weight: bold;
-  border: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: inline-block;
 }
 
-.accordion-content {
-  padding: 15px;
+/* Hover effect */
+.back-home .btn:hover {
+  background: #0a3d62;
+  transform: translateY(-2px);
 }
+
+/* ---------- Mobile Optimization ---------- */
+@media (max-width: 600px) {
+  .back-home .btn {
+    display: block;        /* full width */
+    width: 90%;            /* almost full screen */
+    max-width: 320px;      /* not too wide */
+    margin: 0 auto;        /* keep it centered */
+    font-size: 1.1rem;     /* slightly larger text */
+    padding: 14px 0;       /* taller for finger taps */
+  }
+}
+
