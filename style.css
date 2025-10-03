@@ -422,3 +422,29 @@ header .container {
   }
 }
 
+/* ---------------- CLIENTELE ---------------- */
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.client-card {
+  background: #ffffff;
+  padding: 18px 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #145a8d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: default;
+}
+
+.client-card:hover {
+  background: #f0f4fa;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
