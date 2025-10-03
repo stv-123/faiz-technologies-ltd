@@ -15,7 +15,7 @@
   <meta name="author" content="Faiz Technologies Ltd">
 
   <style>
-    /* Additional styles specific to Contact page */
+    /* Contact page specific styles */
     #contact, #location {
       padding: 60px 20px;
       background: #fff;
@@ -63,6 +63,28 @@
       color: #cf711f;
     }
 
+    /* TikTok link styled like official brand */
+    .tiktok-link {
+      display: block;
+      text-align: center;
+      margin: 25px auto 0 auto;
+      font-size: 1.1rem;
+      font-weight: 700;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #fff;
+      background: linear-gradient(45deg, #69C9D0, #EE1D52);
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      width: fit-content;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .tiktok-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
     .map-container {
       position: relative;
       width: 100%;
@@ -92,6 +114,11 @@
 
       #contact ul li {
         font-size: 0.95rem;
+      }
+
+      .tiktok-link {
+        font-size: 1rem;
+        padding: 10px 20px;
       }
     }
   </style>
@@ -126,6 +153,11 @@
       <li><strong>Email:</strong> <a href="mailto:faiztechnologies78@gmail.com">faiztechnologies78@gmail.com</a></li>
       <li><strong>Phone:</strong> <a href="tel:+254703868499">+254 703 868 499</a></li>
     </ul>
+
+    <!-- TikTok Link Centered -->
+    <a href="https://www.tiktok.com/@faizatechnologies" target="_blank" class="tiktok-link">
+      TikTok - @faizatechnologies
+    </a>
   </section>
 
   <!-- Location / Google Map -->
@@ -146,6 +178,5 @@
     <p>&copy; 2025 Faiz Technologies Ltd | All Rights Reserved</p>
     <p>Email: <a href="mailto:faiztechnologies78@gmail.com">faiztechnologies78@gmail.com</a> | Phone: <a href="tel:+254703868499">+254 703 868 499</a></p>
   </footer>
-
 </body>
 </html>
