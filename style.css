@@ -393,3 +393,32 @@ footer p {
   }
 }
 
+.site-logo {
+  height: 60px;  /* adjust to fit */
+  margin-right: 15px;
+  vertical-align: middle;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Logo inside header */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between logo & text */
+}
+
+.site-logo {
+  height: 50px;   /* desktop size */
+  width: auto;
+}
+
+/* Smaller on phones */
+@media (max-width: 600px) {
+  .site-logo {
+    height: 35px; /* shrink on mobile */
+  }
+}
+
