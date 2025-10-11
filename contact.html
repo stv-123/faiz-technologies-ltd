@@ -6,8 +6,8 @@
   <title>Contact Us | Faiz Technologies Ltd</title>
   <link rel="stylesheet" href="style.css">
   
-   <!-- Favicon -->
- <link rel="icon" type="image/png" href="favicoon.png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicoon.png">
  
   <!-- SEO Meta Tags -->
   <meta name="description" content="Contact Faiz Technologies Ltd – Get in touch for fire & safety services, enquiries, and support.">
@@ -89,6 +89,7 @@
       color: #cf711f;
     }
 
+    /* TikTok button */
     .tiktok-link {
       display: block;
       text-align: center;
@@ -106,6 +107,28 @@
     }
 
     .tiktok-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Facebook button */
+    .facebook-link {
+      display: block;
+      text-align: center;
+      margin: 15px auto 0 auto;
+      font-size: 1.1rem;
+      font-weight: 700;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #fff;
+      background: linear-gradient(45deg, #1877F2, #3b5998);
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      width: fit-content;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .facebook-link:hover {
       transform: translateY(-3px);
       box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     }
@@ -138,7 +161,7 @@
       #contact ul li {
         font-size: 0.95rem;
       }
-      .tiktok-link {
+      .tiktok-link, .facebook-link {
         font-size: 1rem;
         padding: 10px 20px;
       }
@@ -180,6 +203,11 @@
     <!-- TikTok Link Centered -->
     <a href="https://www.tiktok.com/@faiztechnologies" target="_blank" class="tiktok-link">
       TikTok - @faiztechnologies
+    </a>
+
+    <!-- Facebook Link Centered -->
+    <a href="https://www.facebook.com/share/1AjA2JJnf1/" target="_blank" class="facebook-link">
+      Facebook - Faiz Technologies
     </a>
   </section>
 
