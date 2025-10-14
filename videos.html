@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos | Faiz Technology</title>
+  <link rel="stylesheet" href="style.css"> <!-- Use your existing CSS -->
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicoon.png">
+
+  <style>
+    /* Optional: Add extra styling for videos */
+    .video-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .video-gallery video {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .back-home {
+      display: block;
+      width: fit-content;
+      margin: 30px auto;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+    <!-- Header -->
+  <header>
+    <div class="container">
+      <!-- Logo + Company Name -->
+      <div class="brand">
+        <img src="logo.png.png" alt="Faiz Technologies Ltd Logo" class="site-logo">
+        <h1>FAIZ TECHNOLOGIES LTD</h1>
+      </div>
+
+  <!-- Navigation bar -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a class="active" href="videos.html">Videos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Our Videos</h1>
+
+  <section class="video-gallery">
+    <!-- Add your local video files here -->
+      <video controls>
+      <source src="vid 1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video controls>
+      <source src="vid 2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video controls>
+      <source src="vid 3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video controls>
+      <source src="vid 4.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <a href="index.html" class="back-home">← Back to Home</a>
+
+  <footer>
+    <p>&copy; 2025 Faiz Technology. All rights reserved.</p>
+  </footer>
+</body>
+</html>
