@@ -9,7 +9,7 @@
 /* ---------------- GLOBAL ---------------- */
 body {
   line-height: 1.6;
-  background: #f7f7f7;
+  background: #fff;
   color: #222;
 }
 
@@ -32,7 +32,7 @@ p {
 
 /* ---------------- HEADER ---------------- */
 header {
-  background: linear-gradient(90deg, #8b0000, #b30000);
+  background: #b30000; /* deep red */
   color: #fff;
   padding: 18px 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
@@ -78,7 +78,7 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  background: #ff4444;
+  background: #800000; /* darker hover red */
   color: #fff;
 }
 
@@ -126,7 +126,7 @@ nav a.active {
 }
 
 #hero .btn:hover {
-  background: #8b0000;
+  background: #800000;
   transform: translateY(-2px);
 }
 
@@ -139,7 +139,7 @@ nav a.active {
 #services h2, #gallery h2 {
   text-align: center;
   font-size: 2.4rem;
-  color: #8b0000;
+  color: #b30000;
   margin-bottom: 20px;
 }
 
@@ -219,7 +219,7 @@ nav a.active {
 }
 
 .lightbox .close:hover {
-  color: #ff4444;
+  color: #b30000;
 }
 
 #caption {
@@ -228,21 +228,48 @@ nav a.active {
   text-align: center;
 }
 
-/* ---------------- ACCORDION ---------------- */
-.accordion-header {
-  width: 100%;
+/* ---------------- MANAGEMENT PROFILE ---------------- */
+.profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 800px;
+}
+
+.profile-img {
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+}
+
+.profile-info {
+  flex: 1;
   text-align: left;
-  background: #b30000;
-  color: #fff;
-  padding: 15px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border: none;
+}
+
+.profile-info h3 {
+  font-size: 1.4rem;
+  color: #b30000;
+  margin-bottom: 5px;
+}
+
+.profile-info p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 6px;
 }
 
 /* ---------------- FOOTER ---------------- */
 footer {
-  background: #111;
+  background: #d70707;
   color: #fff;
   text-align: center;
   padding: 20px;
@@ -267,12 +294,12 @@ footer p {
 }
 
 .btn:hover, .back-home .btn:hover {
-  background: #8b0000;
+  background: #800000;
   transform: translateY(-2px);
 }
 
 /* ---------------- RESPONSIVE ---------------- */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   header .container {
     flex-direction: column;
     text-align: center;
@@ -283,17 +310,25 @@ footer p {
   }
 
   #hero h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .profile-card {
     flex-direction: column;
-    text-align: center;
     align-items: center;
+    text-align: center;
+    width: 90%;
+    padding: 20px;
   }
 
   .profile-info {
     text-align: center;
+    width: 100%;
+  }
+
+  .profile-img {
+    width: 160px;
+    margin-bottom: 15px;
   }
 }
 
