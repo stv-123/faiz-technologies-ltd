@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Faiz Technologies Ltd | Fire & Safety Services in Kenya</title>
   <link rel="stylesheet" href="style.css">
-
   <link rel="icon" type="image/png" href="favicoon.png">
 
   <meta name="description" content="Faiz Technologies Ltd is a leading Fire and Safety Services provider in Kenya, offering fire prevention, risk assessment, and integrated safety solutions.">
@@ -13,8 +12,283 @@
   <meta name="author" content="Faiz Technologies Ltd">
 
   <link rel="canonical" href="https://www.faiztechnologies.com/">
-
   <meta name="google-site-verification" content="Nec5Bxm98dCQtmnedIxldttFXoosedoX-wbeRv4xnAs" />
+
+  <style>
+    /* ---------------- RESET ---------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    :root {
+      --deep-red: #b30000;
+      --dark-red: #800000;
+      --light-blue: #5cbcff;
+      --white: #ffffff;
+    }
+
+    body {
+      line-height: 1.6;
+      background: var(--white);
+      color: #222;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.3;
+      font-weight: 700;
+      color: #111;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #000;
+    }
+
+    /* ---------------- HEADER ---------------- */
+    header.main-header {
+      background: var(--deep-red);
+      color: var(--white);
+      padding: 18px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    .site-logo {
+      height: 50px;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--white);
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease, color 0.3s ease;
+      margin: 0 4px;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: var(--dark-red);
+      color: var(--white);
+    }
+
+    /* ---------------- HERO ---------------- */
+    .hero-section {
+      background: var(--white);
+      color: #000;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero-content h2 {
+      font-size: 2.8rem;
+      color: var(--light-blue);
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+    .hero-content .btn {
+      background: var(--deep-red);
+      color: var(--white);
+      padding: 14px 30px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .hero-content .btn:hover {
+      background: var(--dark-red);
+      transform: translateY(-2px);
+    }
+
+    /* ---------------- LIGHT & DARK SECTIONS ---------------- */
+    .light-section {
+      background: #f9f9f9;
+      padding: 60px 20px;
+    }
+
+    .dark-section {
+      background: #e6f0ff;
+      padding: 60px 20px;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      color: var(--light-blue);
+      margin-bottom: 40px;
+    }
+
+    section p {
+      max-width: 800px;
+      margin: 0 auto 15px;
+      font-size: 1rem;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* ---------------- MANAGEMENT PROFILE ---------------- */
+    .profile-card {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin: 40px auto;
+      background: var(--white);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      max-width: 800px;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+    }
+
+    .profile-info h3 {
+      font-size: 1.4rem;
+      color: var(--deep-red);
+      margin-bottom: 5px;
+    }
+
+    .profile-info p {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 6px;
+    }
+
+    /* ---------------- VISION, MISSION & CORE VALUES PLAIN WHITE CARDS ---------------- */
+    #vision .accordion {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    #vision .accordion-item {
+      background: #ffffff;
+      color: #000;
+      flex: 1 1 250px;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    /* Remove hover background change */
+    #vision .accordion-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      background: #ffffff; /* keep plain white */
+    }
+
+    #vision .accordion-header {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-align: center;
+      color: #5cbcff;
+    }
+
+    #vision .accordion-content {
+      font-size: 1rem;
+      color: #333;
+      text-align: center;
+    }
+
+    #vision .accordion-content ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    #vision .accordion-content ul li {
+      margin: 5px 0;
+    }
+
+    /* ---------------- FOOTER ---------------- */
+    footer.main-footer {
+      background: var(--deep-red);
+      color: var(--white);
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    footer a:hover {
+      color: var(--light-blue);
+    }
+
+    /* ---------------- RESPONSIVE ---------------- */
+    @media (max-width: 992px) {
+      header .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .profile-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .site-logo {
+        height: 35px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -57,36 +331,34 @@
   </section>
 
   <!-- Vision, Mission & Core Values -->
-  <section id="vision" class="dark-section">
-    <div class="container">
-      <h2>Our Vision, Mission & Core Values</h2>
-      <div class="accordion">
-        <div class="accordion-item active">
-          <button class="accordion-header">Vision</button>
-          <div class="accordion-content">
-            <p>To be a premier Safety Services Solutions provider in the region by providing integrated safety solutions to our esteemed clients.</p>
-          </div>
+  <section id="vision" class="container">
+    <h2>Our Vision, Mission & Core Values</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header">Vision</div>
+        <div class="accordion-content">
+          <p>To be a premier Safety Services Solutions provider in the region by providing integrated safety solutions to our esteemed clients.</p>
         </div>
+      </div>
 
-        <div class="accordion-item active">
-          <button class="accordion-header">Mission</button>
-          <div class="accordion-content">
-            <p>To create total customer satisfaction through provision of integrated safety solutions.</p>
-          </div>
+      <div class="accordion-item">
+        <div class="accordion-header">Mission</div>
+        <div class="accordion-content">
+          <p>To create total customer satisfaction through provision of integrated safety solutions.</p>
         </div>
+      </div>
 
-        <div class="accordion-item active">
-          <button class="accordion-header">Core Values</button>
-          <div class="accordion-content">
-            <ul>
-              <li>Service Delivery & Satisfaction</li>
-              <li>Customer Focus</li>
-              <li>Expertise</li>
-              <li>Integrity</li>
-              <li>Innovation</li>
-              <li>Originality</li>
-            </ul>
-          </div>
+      <div class="accordion-item">
+        <div class="accordion-header">Core Values</div>
+        <div class="accordion-content">
+          <ul>
+            <li>Service Delivery & Satisfaction</li>
+            <li>Customer Focus</li>
+            <li>Expertise</li>
+            <li>Integrity</li>
+            <li>Innovation</li>
+            <li>Originality</li>
+          </ul>
         </div>
       </div>
     </div>
