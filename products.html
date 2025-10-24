@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Products | Faiz Technologies Ltd</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicoon.png">
+  <style>
+    /* ---------------- RESET ---------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    :root {
+      --deep-red: #b30000;
+      --dark-red: #800000;
+      --light-blue: #5cbcff;
+      --white: #ffffff;
+    }
+
+    body {
+      line-height: 1.6;
+      background: var(--white);
+      color: #222;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: var(--deep-red);
+      color: var(--white);
+      padding: 18px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    .site-logo {
+      height: 50px;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--white);
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease, color 0.3s ease;
+      margin: 0 4px;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: var(--dark-red);
+      color: var(--white);
+    }
+
+    /* ---------------- HERO ---------------- */
+    .product-hero {
+      background: var(--white) !important;
+      background-image: none !important;
+      color: #000 !important;
+      position: relative;
+      padding: 80px 20px !important;
+      text-align: center;
+    }
+
+    .product-hero::before {
+      content: none !important;
+    }
+
+    .product-hero h2 {
+      color: var(--light-blue) !important;
+      text-shadow: none !important;
+      font-size: 2.6rem;
+      margin-bottom: 10px;
+    }
+
+    .product-hero p {
+      color: #000 !important;
+      font-size: 1.1rem;
+    }
+
+    /* ---------------- PRODUCT CARDS ---------------- */
+    .product-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 18px;
+      margin-bottom: 22px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      transition: transform 0.25s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .toggle-btn {
+      background: var(--deep-red);
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background 0.3s ease;
+    }
+
+    .toggle-btn:hover {
+      background: var(--dark-red);
+    }
+
+    .product-details {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.6s ease, opacity 0.5s ease;
+    }
+
+    .product-details.open {
+      max-height: 3000px;
+      opacity: 1;
+      margin-top: 12px;
+    }
+
+    /* ---------------- EXTINGUISHER CATEGORIES ---------------- */
+    .extinguisher-categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .extinguisher-card {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 1px solid #ddd;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .extinguisher-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .extinguisher-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    }
+
+    .overlay-caption {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.05rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .extinguisher-card:hover .overlay-caption {
+      opacity: 1;
+    }
+
+    .weight-images {
+      display: none;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+      transition: all 0.5s ease;
+    }
+
+    .weight-images.show {
+      display: grid;
+    }
+
+    .weight-images figure {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+      padding: 8px;
+      background: #fff;
+    }
+
+    .weight-images img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+    }
+
+    .weight-images figcaption {
+      margin-top: 6px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #000;
+    }
+
+    /* ---------------- SAFETY SIGNAGES ---------------- */
+    .product-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .product-images figure {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #ffffff;
+      text-align: center;
+      padding: 8px;
+    }
+
+    .product-images img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+    }
+
+    .product-images figcaption {
+      margin-top: 8px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      color: #000;
+    }
+
+    /* ---------------- BACK TO HOME ---------------- */
+    .back-home {
+      display: inline-block;
+      margin: 10px auto 30px;
+      background: #222;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .back-home:hover {
+      background: #b30000;
+    }
+
+    /* ---------------- FOOTER ---------------- */
+    footer {
+      background-color: #b30000;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    footer a:hover {
+      color: var(--light-blue);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="brand">
+        <img src="logo.png.png" alt="Faiz Technologies Logo" class="site-logo">
+        <h1>FAIZ TECHNOLOGIES LTD</h1>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="videos.html">Videos</a>
+        <a href="#vision">Vision & Mission</a>
+        <a href="services.html">Services</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="contact.html">Contact</a>
+        <a href="clientele.html">Clientele</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" class="product-hero">
+    <div class="hero-content">
+      <h2>OUR PRODUCTS</h2>
+      <p>Explore the quality products we provide to keep premises safe and compliant.</p>
+    </div>
+  </section>
+
+  <main class="container" id="products">
+    <!-- Fire Extinguishers -->
+    <article class="product-card">
+      <h2>Fire Extinguishers</h2>
+      <p>We supply a variety of extinguishers suitable for homes, offices, and industry — choose the correct type for your hazard.</p>
+      <button class="toggle-btn" aria-expanded="false">View More</button>
+      <div class="product-details">
+        <div class="extinguisher-categories">
+          <div class="extinguisher-card" data-type="dry">
+            <img src="Dry ch.png" alt="Dry Chemical Powder">
+            <div class="overlay-caption">Dry Chemical Powder</div>
+          </div>
+          <div class="extinguisher-card" data-type="foam">
+            <img src="foam.jpg" alt="Foam Extinguisher">
+            <div class="overlay-caption">Foam Extinguisher</div>
+          </div>
+          <div class="extinguisher-card" data-type="co2">
+            <img src="co2.webp" alt="CO₂ Extinguisher">
+            <div class="overlay-caption">CO₂ Extinguisher</div>
+          </div>
+          <div class="extinguisher-card" data-type="water">
+            <img src="water.jpg" alt="Water Extinguisher">
+            <div class="overlay-caption">Water Extinguisher</div>
+          </div>
+        </div>
+
+        <!-- Weights display -->
+        <div class="weight-images" id="dry-weights">
+          <figure><img src="chem 2kg.webp" alt="Dry 2kg"><figcaption>2kg</figcaption></figure>
+          <figure><img src="chem 4kg.webp" alt="Dry 4kg"><figcaption>4kg</figcaption></figure>
+          <figure><img src="chem 6kg.jpg" alt="Dry 6kg"><figcaption>6kg</figcaption></figure>
+          <figure><img src="chem 9kg.jpg" alt="Dry 9kg"><figcaption>9kg</figcaption></figure>
+          <figure><img src="chem 25kg.avif" alt="Dry 25kg"><figcaption>25kg</figcaption></figure>
+        </div>
+
+        <div class="weight-images" id="foam-weights">
+          <figure><img src="foam 6l.jpg" alt="Foam 6L"><figcaption>6L</figcaption></figure>
+          <figure><img src="Foam 9l.jpg" alt="Foam 9L"><figcaption>9L</figcaption></figure>
+        </div>
+
+        <div class="weight-images" id="co2-weights">
+          <figure><img src="co2 2.5kg.webp" alt="CO2 2.5kg"><figcaption>2.5kg</figcaption></figure>
+          <figure><img src="CO2 5kg.jpg" alt="CO2 5kg"><figcaption>5kg</figcaption></figure>
+        </div>
+
+        <div class="weight-images" id="water-weights">
+          <figure><img src="Water 9L.jpg" alt="Water 9L"><figcaption>9L</figcaption></figure>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- Safety Signages -->
+    <article class="product-card">
+      <h2>Safety Signages</h2>
+      <p>Durable, visible signs to mark exits, assembly points, and hazards — helps staff and visitors stay safe.</p>
+      <button class="toggle-btn" aria-expanded="false">View More</button>
+      <div class="product-details">
+        <div class="product-images">
+          <figure>
+            <img src="A.point.jpg" alt="Fire Assembly Point Sign">
+            <figcaption>Fire Assembly Point</figcaption>
+          </figure>
+          <figure>
+            <img src="E. exit.jpg" alt="Emergency Exit Sign">
+            <figcaption>Emergency Exit</figcaption>
+          </figure>
+          <figure>
+            <img src="Fire exit.jpg" alt="Fire Exit Sign">
+            <figcaption>Fire Exit</figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+
+    <div style="text-align:center;">
+      <a href="index.html" class="back-home">← Back to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Faiz Technologies Ltd | All Rights Reserved</p>
+    <p>
+      Email: <a href="mailto:faiztechnology78@gmail.com">faiztechnology78@gmail.com</a> |
+      Phone: <a href="tel:+254703868499">+254 703 868 499</a>
+    </p>
+  </footer>
+
+  <script>
+    // Toggle product details
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const details = btn.nextElementSibling;
+        const isOpen = details.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+    });
+
+    // Extinguisher type click
+    document.querySelectorAll('.extinguisher-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const type = card.dataset.type;
+        document.querySelectorAll('.weight-images').forEach(w => w.classList.remove('show'));
+        document.getElementById(`${type}-weights`).classList.add('show');
+      });
+    });
+  </script>
+</body>
+</html>
