@@ -88,20 +88,14 @@
     /* ---------------- HERO ---------------- */
     .product-hero {
       background: var(--white) !important;
-      background-image: none !important;
       color: #000 !important;
       position: relative;
       padding: 80px 20px !important;
       text-align: center;
     }
 
-    .product-hero::before {
-      content: none !important;
-    }
-
     .product-hero h2 {
       color: var(--light-blue) !important;
-      text-shadow: none !important;
       font-size: 2.6rem;
       margin-bottom: 10px;
     }
@@ -135,6 +129,7 @@
       cursor: pointer;
       font-weight: 700;
       transition: background 0.3s ease;
+      margin-top: 10px;
     }
 
     .toggle-btn:hover {
@@ -149,7 +144,7 @@
     }
 
     .product-details.open {
-      max-height: 3000px;
+      max-height: 5000px;
       opacity: 1;
       margin-top: 12px;
     }
@@ -157,8 +152,8 @@
     /* ---------------- EXTINGUISHER CATEGORIES ---------------- */
     .extinguisher-categories {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
       margin-top: 16px;
     }
 
@@ -169,44 +164,30 @@
       cursor: pointer;
       border: 1px solid #ddd;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      padding: 6px;
+      background: #fff;
     }
 
     .extinguisher-card img {
       width: 100%;
-      height: 180px;
+      height: 120px;
       object-fit: cover;
-      display: block;
-    }
-
-    .extinguisher-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+      border-radius: 6px;
     }
 
     .overlay-caption {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-weight: 700;
-      font-size: 1.05rem;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .extinguisher-card:hover .overlay-caption {
-      opacity: 1;
+      display: block;
+      margin-top: 6px;
+      font-weight: bold;
+      color: #000;
     }
 
     .weight-images {
       display: none;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
       gap: 12px;
-      margin-top: 16px;
-      transition: all 0.5s ease;
+      margin-top: 12px;
     }
 
     .weight-images.show {
@@ -217,7 +198,7 @@
       border: 1px solid #ddd;
       border-radius: 8px;
       text-align: center;
-      padding: 8px;
+      padding: 6px;
       background: #fff;
     }
 
@@ -226,14 +207,13 @@
       aspect-ratio: 1 / 1;
       object-fit: cover;
       border-radius: 6px;
-      display: block;
     }
 
     .weight-images figcaption {
       margin-top: 6px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: bold;
-      color: #000;
+      color: #222;
     }
 
     /* ---------------- SAFETY SIGNAGES ---------------- */
@@ -300,6 +280,16 @@
     footer a:hover {
       color: var(--light-blue);
     }
+
+    @media (max-width: 600px) {
+      .extinguisher-card img {
+        height: 100px;
+      }
+
+      .weight-images {
+        gap: 8px;
+      }
+    }
   </style>
 </head>
 
@@ -356,27 +346,57 @@
           </div>
         </div>
 
-        <!-- Weights display -->
+        <!-- Weights/Varieties -->
         <div class="weight-images" id="dry-weights">
-          <figure><img src="chem 2kg.webp" alt="Dry 2kg"><figcaption>2kg</figcaption></figure>
-          <figure><img src="chem 4kg.webp" alt="Dry 4kg"><figcaption>4kg</figcaption></figure>
-          <figure><img src="chem 6kg.jpg" alt="Dry 6kg"><figcaption>6kg</figcaption></figure>
-          <figure><img src="chem 9kg.jpg" alt="Dry 9kg"><figcaption>9kg</figcaption></figure>
-          <figure><img src="chem 25kg.avif" alt="Dry 25kg"><figcaption>25kg</figcaption></figure>
+          <figure>
+            <img src="chem 2kg.webp" alt="Dry 2kg">
+            <figcaption>2kg - Small office & home fires</figcaption>
+          </figure>
+          <figure>
+            <img src="chem 4kg.webp" alt="Dry 4kg">
+            <figcaption>4kg - General use in offices</figcaption>
+          </figure>
+          <figure>
+            <img src="chem 6kg.jpg" alt="Dry 6kg">
+            <figcaption>6kg - Workshops & light industry</figcaption>
+          </figure>
+          <figure>
+            <img src="chem 9kg.jpg" alt="Dry 9kg">
+            <figcaption>9kg - Medium industry</figcaption>
+          </figure>
+          <figure>
+            <img src="chem 25kg.avif" alt="Dry 25kg">
+            <figcaption>25kg - Large factories & warehouses</figcaption>
+          </figure>
         </div>
 
         <div class="weight-images" id="foam-weights">
-          <figure><img src="foam 6l.jpg" alt="Foam 6L"><figcaption>6L</figcaption></figure>
-          <figure><img src="Foam 9l.jpg" alt="Foam 9L"><figcaption>9L</figcaption></figure>
+          <figure>
+            <img src="foam 6l.jpg" alt="Foam 6L">
+            <figcaption>6L - Small flammable liquid fires</figcaption>
+          </figure>
+          <figure>
+            <img src="Foam 9l.jpg" alt="Foam 9L">
+            <figcaption>9L - Offices & small workshops</figcaption>
+          </figure>
         </div>
 
         <div class="weight-images" id="co2-weights">
-          <figure><img src="co2 2.5kg.webp" alt="CO2 2.5kg"><figcaption>2.5kg</figcaption></figure>
-          <figure><img src="CO2 5kg.jpg" alt="CO2 5kg"><figcaption>5kg</figcaption></figure>
+          <figure>
+            <img src="co2 2.5kg.webp" alt="CO2 2.5kg">
+            <figcaption>2.5kg - Small electrical equipment fires</figcaption>
+          </figure>
+          <figure>
+            <img src="CO2 5kg.jpg" alt="CO2 5kg">
+            <figcaption>5kg - Offices & server rooms</figcaption>
+          </figure>
         </div>
 
         <div class="weight-images" id="water-weights">
-          <figure><img src="Water 9L.jpg" alt="Water 9L"><figcaption>9L</figcaption></figure>
+          <figure>
+            <img src="Water 9L.jpg" alt="Water 9L">
+            <figcaption>9L - Wood, paper & general combustibles</figcaption>
+          </figure>
         </div>
 
       </div>
@@ -419,12 +439,17 @@
   </footer>
 
   <script>
-    // Toggle product details
+    // Toggle product sections
     document.querySelectorAll('.toggle-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const details = btn.nextElementSibling;
         const isOpen = details.classList.toggle('open');
         btn.setAttribute('aria-expanded', isOpen);
+
+        // Hide all weight-images if closing
+        if (!isOpen) {
+          details.querySelectorAll('.weight-images').forEach(w => w.classList.remove('show'));
+        }
       });
     });
 
@@ -432,8 +457,16 @@
     document.querySelectorAll('.extinguisher-card').forEach(card => {
       card.addEventListener('click', () => {
         const type = card.dataset.type;
+
+        // Close all other weight-images
         document.querySelectorAll('.weight-images').forEach(w => w.classList.remove('show'));
-        document.getElementById(`${type}-weights`).classList.add('show');
+
+        // Open selected type
+        const selected = document.getElementById(`${type}-weights`);
+        if (selected) selected.classList.add('show');
+
+        // Scroll smoothly to varieties
+        selected.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
   </script>
