@@ -6,10 +6,19 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ---------------- GLOBAL VARIABLES ---------------- */
+:root {
+  --deep-red: #b30000;
+  --dark-red: #800000;
+  --light-blue: #5cbcff;
+  --blackish: #1a1a1a;
+  --white: #ffffff;
+}
+
 /* ---------------- GLOBAL ---------------- */
 body {
   line-height: 1.6;
-  background: #fff;
+  background: var(--white);
   color: #222;
 }
 
@@ -32,8 +41,8 @@ p {
 
 /* ---------------- HEADER ---------------- */
 header {
-  background: #b30000; /* deep red */
-  color: #fff;
+  background: var(--deep-red);
+  color: var(--white);
   padding: 18px 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
@@ -67,7 +76,7 @@ nav {
 }
 
 nav a {
-  color: #fff;
+  color: var(--white);
   padding: 8px 14px;
   border-radius: 6px;
   text-decoration: none;
@@ -78,14 +87,14 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  background: #800000; /* darker hover red */
-  color: #fff;
+  background: var(--dark-red);
+  color: var(--white);
 }
 
 /* ---------------- HERO ---------------- */
 #hero {
   background: url('https://images.unsplash.com/photo-1581091012184-5c1b1d8a6b9b?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
-  color: #fff;
+  color: var(--white);
   text-align: center;
   padding: 120px 20px;
   position: relative;
@@ -107,6 +116,7 @@ nav a.active {
   font-size: 3rem;
   margin-bottom: 15px;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  color: var(--light-blue);
 }
 
 #hero p {
@@ -115,8 +125,8 @@ nav a.active {
 }
 
 #hero .btn {
-  background: #b30000;
-  color: #fff;
+  background: var(--deep-red);
+  color: var(--white);
   padding: 14px 30px;
   text-decoration: none;
   font-weight: bold;
@@ -126,20 +136,20 @@ nav a.active {
 }
 
 #hero .btn:hover {
-  background: #800000;
+  background: var(--dark-red);
   transform: translateY(-2px);
 }
 
 /* ---------------- SECTIONS ---------------- */
 #services, #gallery {
   padding: 70px 20px;
-  background: #fff;
+  background: var(--white);
 }
 
 #services h2, #gallery h2 {
   text-align: center;
   font-size: 2.4rem;
-  color: #b30000;
+  color: var(--light-blue);
   margin-bottom: 20px;
 }
 
@@ -153,7 +163,7 @@ nav a.active {
 
 /* ---------------- CARDS ---------------- */
 .service-card, .client-card, .contact-card, .profile-card {
-  background: #fff;
+  background: var(--white);
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -166,7 +176,7 @@ nav a.active {
 }
 
 .service-card h3 {
-  color: #b30000;
+  color: var(--deep-red);
   margin-bottom: 15px;
 }
 
@@ -214,16 +224,16 @@ nav a.active {
   top: 20px;
   right: 30px;
   font-size: 2rem;
-  color: #fff;
+  color: var(--white);
   cursor: pointer;
 }
 
 .lightbox .close:hover {
-  color: #b30000;
+  color: var(--deep-red);
 }
 
 #caption {
-  color: #fff;
+  color: var(--white);
   font-size: 1rem;
   text-align: center;
 }
@@ -235,7 +245,7 @@ nav a.active {
   justify-content: center;
   gap: 25px;
   margin: 40px auto;
-  background: #fff;
+  background: var(--white);
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -257,7 +267,7 @@ nav a.active {
 
 .profile-info h3 {
   font-size: 1.4rem;
-  color: #b30000;
+  color: var(--deep-red);
   margin-bottom: 5px;
 }
 
@@ -270,7 +280,7 @@ nav a.active {
 /* ---------------- FOOTER ---------------- */
 footer {
   background: #d70707;
-  color: #fff;
+  color: var(--white);
   text-align: center;
   padding: 20px;
   margin-top: 50px;
@@ -283,8 +293,8 @@ footer p {
 
 /* ---------------- BUTTONS ---------------- */
 .btn, .back-home .btn {
-  background: #b30000;
-  color: #fff;
+  background: var(--deep-red);
+  color: var(--white);
   padding: 12px 24px;
   border-radius: 6px;
   text-decoration: none;
@@ -294,8 +304,44 @@ footer p {
 }
 
 .btn:hover, .back-home .btn:hover {
-  background: #800000;
+  background: var(--dark-red);
   transform: translateY(-2px);
+}
+
+/* ---------------- LIGHT BLUE THEMING ---------------- */
+
+/* Section Headings */
+#about h2,
+#vision h2,
+#mission h2,
+#core-values h2,
+#management h2,
+#gallery h2,
+#videos h2,
+#services h2,
+#contact h2 {
+  color: var(--light-blue);
+}
+
+/* Contact Info */
+.contact-info a,
+.contact-info p {
+  color: var(--light-blue);
+}
+
+.contact-info a:hover {
+  color: #8fd6ff;
+}
+
+/* Universal Page Heading */
+.page-heading {
+  color: var(--light-blue) !important;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 40px 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* ---------------- RESPONSIVE ---------------- */
@@ -345,4 +391,45 @@ footer p {
   .site-logo {
     height: 35px;
   }
+}
+.light-blue {
+  color: var(--light-blue);
+}
+/* ---------- PRODUCT PAGE HERO OVERRIDE ---------- */
+.product-hero {
+  background: var(--white) !important;
+  background-image: none !important;
+  color: #000 !important;
+  position: relative;
+}
+
+.product-hero::before {
+  content: none !important; /* remove the dark overlay */
+}
+
+.product-hero h2 {
+  color: var(--light-blue) !important;
+  text-shadow: none !important;
+}
+
+.product-hero p {
+  color: #000 !important;
+}
+/* --- PRODUCTS SECTION OVERRIDE --- */
+#products {
+  background-color: #ffffff !important; /* force white background */
+  color: #000000 !important; /* make text black */
+  padding: 60px 0;
+}
+
+/* “Our Products” heading color */
+#products h2 {
+  color: #5cbcff !important; /* same light blue as other sections */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Make sure any paragraph or subtext is black */
+#products p {
+  color: #000000 !important;
 }
