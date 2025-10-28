@@ -343,6 +343,16 @@ footer p {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+/* ---------- CONTACT & CLIENTELE HEADINGS ---------- */
+#contact h2,
+#clientele h2 {
+  color: var(--light-blue) !important;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
 
 /* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 992px) {
