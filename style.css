@@ -291,6 +291,19 @@ footer p {
   font-size: 0.95rem;
 }
 
+/* ---------- FOOTER LINK COLORS ---------- */
+footer a {
+  color: var(--light-blue);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #8fd6ff; /* a lighter blue on hover */
+  text-decoration: underline;
+}
+
+
 /* ---------------- BUTTONS ---------------- */
 .btn, .back-home .btn {
   background: var(--deep-red);
@@ -442,4 +455,14 @@ footer p {
 /* Make sure any paragraph or subtext is black */
 #products p {
   color: #000000 !important;
+}
+footer a {
+  color: var(--light-blue) !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #8fd6ff !important;
+  text-decoration: underline;
 }
