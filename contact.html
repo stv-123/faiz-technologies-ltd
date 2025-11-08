@@ -75,21 +75,26 @@
     #contact ul li {
       margin: 12px 0;
       font-size: 1rem;
-      color: #145a8d;
       font-weight: 600;
     }
 
+    /* Light blue labels (Email:, Phone:) */
+    #contact ul li strong {
+      color: #4da3ff; /* light blue */
+    }
+
+    /* Black text for actual email and phone number */
     #contact ul li a {
-      color: #e58e26;
+      color: #000; /* black */
       text-decoration: none;
       transition: color 0.3s ease;
     }
 
     #contact ul li a:hover {
-      color: #cf711f;
+      color: #333; /* darker gray on hover */
     }
 
-    /* TikTok button */
+    /* TikTok button - solid light blue */
     .tiktok-link {
       display: block;
       text-align: center;
@@ -98,20 +103,21 @@
       font-weight: 700;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       color: #fff;
-      background: linear-gradient(45deg, #69C9D0, #EE1D52);
+      background-color: #4da3ff; /* solid light blue */
       padding: 12px 25px;
       border-radius: 25px;
       text-decoration: none;
       width: fit-content;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
     }
 
     .tiktok-link:hover {
       transform: translateY(-3px);
       box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      background-color: #3690f0; /* slightly darker blue on hover */
     }
 
-    /* Facebook button */
+    /* Facebook button (optional brand blue retained) */
     .facebook-link {
       display: block;
       text-align: center;
@@ -202,7 +208,7 @@
       <li><strong>Phone:</strong> <a href="tel:+254703868499">+254 703 868 499</a></li>
     </ul>
 
-    <!-- TikTok Link Centered -->
+    <!-- TikTok Link -->
     <a href="https://www.tiktok.com/@faiztechnologies" target="_blank" class="tiktok-link">
       TikTok - @faiztechnologies
     </a>
